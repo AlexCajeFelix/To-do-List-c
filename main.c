@@ -63,7 +63,7 @@ Excluir() {
 
     for (i = 0; i < Banco.ContadorDeTarefas; i++) {
         if (Banco.Tarefas[i].id != ExcluirId) {
-          
+
             Banco.Tarefas[j++] = Banco.Tarefas[i];
         }
         else {
@@ -124,6 +124,7 @@ VisualizarporDescricao() {
 }
 int main()
 {
+    
     system("cls");
     printf("Digite o que você gostaria de fazer: \n");
     printf("1 - Criar \n");
