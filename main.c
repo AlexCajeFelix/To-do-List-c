@@ -20,10 +20,16 @@ struct Bd
 struct Bd Banco;
 
 VoltarPagAnterior() {
-    printf("Envie 1 pra voltar e 0 para continuar criando :\n");
+    printf("Envie 1 pra voltar e 0 para sair:\n");
     scanf_s("%d", &Voltar);
     if (Voltar == 1) {
         main();
+    }
+    if(Voltar == 0){
+        return 1;
+    }
+    else {
+        printf("Opção inválida. Tente novamente.\n");
     }
 }
 CriarTarefa() {
