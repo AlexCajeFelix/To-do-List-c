@@ -31,7 +31,7 @@ VoltarPagAnterior() {
     }
 }
 
- 
+ //sdasdasdasdsadasdasdasdas
 CriarTarefa() {
     printf("Digite o titulo que voce deseja criar:\n");
     fgets(Banco.Tarefas[Banco.ContadorDeTarefas].Titulo, sizeof(Banco.Tarefas[Banco.ContadorDeTarefas].Titulo), stdin);
