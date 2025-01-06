@@ -55,12 +55,16 @@ int main()
     case 2:
         system("cls");
         printf("Você escolheu Editar Tarefa.\n");
+        int LocalizaEdit;
+        printf("-------------------- Editar -------------------\n");
+        printf("Digite o id do card a ser alterado\n");
+        scanf_s("%d", &LocalizaEdit);
     
         break;
     case 3:
         system("cls");
         printf("Você escolheu Excluir.\n");
-      
+         
         break;
     case 4:
          printf("Você escolheu Visualizar todos.\n");

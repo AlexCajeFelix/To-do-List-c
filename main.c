@@ -118,9 +118,7 @@ VisualizarporDescricao() {
     fgets(FiltarDescricao, sizeof(FiltarDescricao), stdin);
    
     for (int i = 0; i < Banco.ContadorDeTarefas; i++) {
-
         strstr(Banco.Tarefas[i].Descricao, FiltarDescricao);
-
         printf("Id %i\n", Banco.Tarefas[i].id);
         printf("Titulo %s\n", Banco.Tarefas[i].Titulo);
         printf("Descrcao %s\n", Banco.Tarefas[i].Descricao);
