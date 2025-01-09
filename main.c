@@ -108,17 +108,13 @@ VisualizarporID() {
     VoltarPagAnterior();
 }
 VisualizarporDescricao() {
-    char FiltarDescricao[10];
-     
-   
+    
+    
     printf ("--------------------Vsualizar por Descrção -------------------\n");
     printf("Digite a descricao que voce deseja filtrar\n");
 
-    char *FiltarDescricao = malloc(10 * sizeof(char));
-    fgets(*FiltarDescricao, sizeof(FiltarDescricao), stdin);
-    printf("Teste: %s\n", FiltarDescricao);
-
-   
+   char *FiltarDescricao = malloc(100 * sizeof(char));
+    fgets(FiltarDescricao, sizeof(FiltarDescricao), stdin);
     for (int i = 0; i < Banco.ContadorDeTarefas; i++) {
         strstr(Banco.Tarefas[i].Descricao, FiltarDescricao);
         printf("Id %i\n", Banco.Tarefas[i].id);
