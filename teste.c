@@ -78,17 +78,7 @@ int main()
         break;
     case 4:
          printf("Você escolheu Visualizar todos.\n");
-         int *PonteiroContador;
-         char *PonteiroTitulo;
-         char *PonteiroDescricao;
-    
-        for (int i = 0; i < Banco.ContadorDeTarefas; i++) {
-            PonteiroContador = &Banco.Tarefas[i].id;
-            PonteiroTitulo  = &Banco.Tarefas[i].Titulo;
-            PonteiroDescricao = &Banco.Tarefas[i].Descricao;
-            printf("Quantidade de tarefas: %d\n", *PonteiroContador);
-            printf("Titulo: %s\n", PonteiroTitulo);    
-            printf("Descricao: %s\n", PonteiroDescricao);
+        
         }
          
         break;

@@ -109,18 +109,20 @@ VisualizarporID() {
 }
 VisualizarporDescricao() {
     
-    
     printf ("--------------------Vsualizar por Descrção -------------------\n");
     printf("Digite a descricao que voce deseja filtrar\n");
 
-   char *FiltarDescricao = malloc(100 * sizeof(char));
-    fgets(FiltarDescricao, sizeof(FiltarDescricao), stdin);
+    char *FiltarDescricao = malloc(10 * sizeof(char));
+    fgets(FiltarDescricao, 100, stdin);
+   
+    FiltarDescricao[strcspn(FiltarDescricao, "\n")] = '\0';
+
     for (int i = 0; i < Banco.ContadorDeTarefas; i++) {
-        strstr(Banco.Tarefas[i].Descricao, FiltarDescricao);
-        printf("Id %i\n", Banco.Tarefas[i].id);
-        printf("Titulo %s\n", Banco.Tarefas[i].Titulo);
-        printf("Descrcao %s\n", Banco.Tarefas[i].Descricao);
-        return 0;
+       if(strstr(Banco.Tarefas[i].Descricao, FiltarDescricao) != NULL) {
+            printf("Id %i\n", Banco.Tarefas[i].id);
+            printf("Titulo %s\n", Banco.Tarefas[i].Titulo);
+            printf("Descrcao %s\n", Banco.Tarefas[i].Descricao);
+        }
     }
     VoltarPagAnterior();
 }
