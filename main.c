@@ -20,16 +20,13 @@ struct Bd
 struct Bd Banco;
 
 VoltarPagAnterior() {
-    printf("Envie 1 pra voltar e 0 para sair:\n");
+    printf("Envie 1 pra voltar e 0 para sair do programa:\n");
     scanf_s("%d", &Voltar);
     if (Voltar == 1) {
         main();
     }
-    if(Voltar == 0){
-        return 1;
-    }
     else {
-        printf("Opção inválida. Tente novamente.\n");
+        printf("Inicie o programa novamente.\n");
     }
 }
 CriarTarefa() {
@@ -112,10 +109,15 @@ VisualizarporID() {
 }
 VisualizarporDescricao() {
     char FiltarDescricao[10];
-    printf("--------------------Vsualizar por Descrção -------------------\n");
+     
+   
+    printf ("--------------------Vsualizar por Descrção -------------------\n");
     printf("Digite a descricao que voce deseja filtrar\n");
 
-    fgets(FiltarDescricao, sizeof(FiltarDescricao), stdin);
+    char *FiltarDescricao = malloc(10 * sizeof(char));
+    fgets(*FiltarDescricao, sizeof(FiltarDescricao), stdin);
+    printf("Teste: %s\n", FiltarDescricao);
+
    
     for (int i = 0; i < Banco.ContadorDeTarefas; i++) {
         strstr(Banco.Tarefas[i].Descricao, FiltarDescricao);

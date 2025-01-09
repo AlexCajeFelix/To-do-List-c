@@ -19,7 +19,17 @@ struct Bd
 };
 struct Bd Banco;
 
-
+VoltarPagAnterior() {
+    int Voltar;
+    printf("Envie 1 pra voltar e 0 para sair do programa:\n");
+    scanf_s("%d", &Voltar);
+    if (Voltar == 1) {
+        main();
+    }
+    else {
+        printf("Inicie o programa novamente.\n");
+    }
+}
 
 int main()
 {
@@ -85,8 +95,21 @@ int main()
     case 5:
         system("cls");
         printf("Você escolheu Visualizar por ID.\n");
+        int *FiltarId = malloc(10 * sizeof(char));
+        scanf_s("%d", &FiltarId);
+        int Voltar;
+        printf("Teste: %d\n", FiltarId);
+        
+      for(int i = 0; i < Banco.ContadorDeTarefas; i++) {
+            if (FiltarId == Banco.Tarefas[i].id) {
+                printf("Id %i\n", Banco.Tarefas[i].id);
+                printf("Titulo %s\n", Banco.Tarefas[i].Titulo);
+                printf("Descrcao %s\n", Banco.Tarefas[i].Descricao);
+            }
+      }
 
-
+      VoltarPagAnterior();
+        
         
         break;
     case 6:
